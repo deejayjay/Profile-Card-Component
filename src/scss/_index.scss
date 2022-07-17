@@ -1,0 +1,6 @@
+@use "./colors" as *;
+
+body {
+  background-color: $white;
+  color: $black;
+}
