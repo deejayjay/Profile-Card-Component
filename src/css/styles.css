@@ -414,8 +414,130 @@ body {
 }
 
 body {
-  background-color: #ffffff;
   color: #000000;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+  font-family: "Kumbh Sans", sans-serif;
+  background: url("../assets/images/bg-pattern-top.svg") right 50vw bottom 45vh, url("../assets/images/bg-pattern-bottom.svg") top 45vh left 50vw;
+  background-repeat: no-repeat;
+  background-color: #19a1ae;
+}
+
+.bg-top {
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+.bg-bottom {
+  width: 50%;
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.card {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.card-header {
+  position: relative;
+  border-radius: 15px;
+  padding: 5.75rem 1.5rem 0;
+  text-align: center;
+}
+.card-header::before {
+  content: "";
+  height: 140px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #19a1ae;
+  background-image: url("../assets/images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+
+.profile-picture {
+  position: relative;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.profile-name,
+.profile-stats h2 {
+  color: #2d3248;
+  font-weight: 700;
+}
+
+.profile-name {
+  font-size: 1.125rem;
+  margin-top: 0.75rem;
+}
+
+.profile-age {
+  color: #6a6f81;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+.profile-city {
+  font-size: 0.875rem;
+  color: #6a6f81;
+  margin-top: 0.25rem;
+}
+
+.card-footer {
+  border-top: 1px solid #e8e9ec;
+  margin-top: 1.5rem;
+  padding: 1.5rem 3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.card-footer .profile-stats {
+  text-align: center;
+}
+.card-footer .profile-stats h2 {
+  font-size: 1.125rem;
+}
+.card-footer .profile-stats p {
+  color: #6a6f81;
+  font-size: 0.625rem;
+  letter-spacing: 1.5;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-position: right 60vw bottom 40vh, top 40vh left 60vw;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

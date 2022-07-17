@@ -1,6 +1,133 @@
 @use "./colors" as *;
 
 body {
-  background-color: $white;
   color: $black;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+  font-family: "Kumbh Sans", sans-serif;
+  background: url("../assets/images/bg-pattern-top.svg") right 50vw bottom 45vh,
+    url("../assets/images/bg-pattern-bottom.svg") top 45vh left 50vw;
+  background-repeat: no-repeat;
+  background-color: $dark-cyan;
+}
+
+.bg-top {
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+.bg-bottom {
+  width: 50%;
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+.card {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.card-header {
+  position: relative;
+  border-radius: 15px;
+  padding: 5.75rem 1.5rem 0;
+  text-align: center;
+
+  &::before {
+    content: "";
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $dark-cyan;
+    background-image: url("../assets/images/bg-pattern-card.svg");
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.profile-picture {
+  position: relative;
+  border: 5px solid $white;
+  border-radius: 50%;
+  // margin-top: -75px;
+}
+
+.profile-name,
+.profile-stats h2 {
+  color: $dark-blue;
+  font-weight: 700;
+}
+
+.profile-name {
+  font-size: 1.125rem;
+  margin-top: 0.75rem;
+}
+
+.profile-age {
+  color: $greyish-blue;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+.profile-city {
+  font-size: 0.875rem;
+  color: $greyish-blue;
+  margin-top: 0.25rem;
+}
+
+.card-footer {
+  border-top: 1px solid $light-grey;
+  margin-top: 1.5rem;
+  padding: 1.5rem 3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  .profile-stats {
+    text-align: center;
+
+    & h2 {
+      font-size: 1.125rem;
+    }
+
+    & p {
+      color: $greyish-blue;
+      font-size: 0.625rem;
+      letter-spacing: 1.5;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-position: right 60vw bottom 40vh, top 40vh left 60vw;
+  }
 }
